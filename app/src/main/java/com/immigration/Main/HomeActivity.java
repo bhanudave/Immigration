@@ -182,11 +182,6 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * loading fragment into FrameLayout
-     *
-     * @param fragment
-     */
     private void loadFragment(Fragment fragment) {
         // load fragment
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
