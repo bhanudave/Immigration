@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/report_detail_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/age_titlesubject"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/choose_work_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age_titlesubject"
+        android:layout_marginTop="@dimen/text_labellow"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="@dimen/text_labelmax"
+        android:text="@string/report_view"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_labelmin" />
+
+    <LinearLayout
+        android:id="@+id/age_title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_labelmax"
+        android:layout_below="@+id/choose_work_title"
+        android:layout_marginTop="@dimen/text_labellow"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/profile_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="PROFILE DETAILS"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_labelmin" />
+
+        <TextView
+            android:id="@+id/job_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="JOB DESCRIPTION"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_labelmin" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/call_query"
+        android:layout_below="@+id/age_title_lay"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/report_message_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/text_labelmed"
+                    android:paddingRight="@dimen/text_labelmed">
+
+                    <TextView
+                        android:id="@+id/report_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_labelsml"
+                        android:gravity="center"
+                        android:text="Sorry !"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_labelmed" />
+
+                    <TextView
+                        android:id="@+id/report_message_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/report_message"
+                        android:layout_margin="@dimen/text_labelsml"
+                        android:gravity="center"
+                        android:text="You are not elligible for any visa category, but you can still contact us to get expert assistance."
+                        android:textColor="@color/hint"
+                        android:textSize="@dimen/text_labelmin" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/report_message_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/report_message_layout"
+                    android:layout_margin="@dimen/text_labelmed"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/text_labellow"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/user_imge1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_round"
+                            android:src="@drawable/user" />
+
+                        <TextView
+                            android:id="@+id/user_txt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="Skilled Independent Subclass 189"
+                            android:textColor="@color/hint"
+                            android:textSize="@dimen/text_labelsml" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/text_labellow"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/user_imge2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_round"
+                            android:src="@drawable/user" />
+
+                        <TextView
+                            android:id="@+id/user_txt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="Skilled Nominated Subclass 190"
+                            android:textColor="@color/hint"
+                            android:textSize="@dimen/text_labelsml" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/text_labellow"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/user_imge3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_round"
+                            android:src="@drawable/user" />
+
+                        <TextView
+                            android:id="@+id/user_txt3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="Skilled Regional (Provisional) Subclass 489"
+                            android:textColor="@color/hint"
+                            android:textSize="@dimen/text_labelsml" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/complete_report_message_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/report_message_lay"
+                    android:layout_margin="@dimen/text_labelsml"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/text_labelmed"
+                    android:paddingRight="@dimen/text_labelmed"
+                    android:text="To get a complete report please click below."
+                    android:textColor="@color/hint"
+                    android:textSize="@dimen/text_labelmin" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/text_labelmed"
+                    android:paddingRight="@dimen/text_labelmed"
+                    android:text="Ceiling Quota For  2020-2021 (As on 10/01/2020)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_labelsml" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/text_labelmed"
+                    android:paddingRight="@dimen/text_labelmed">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/table_border"
+                            android:gravity="center"
+                            android:text="Ceiling Value"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_labelsml" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/table_border"
+                            android:gravity="center"
+                            android:text="Invitation to Date"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_labelsml" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/table_border"
+                            android:gravity="center"
+                            android:text="Ceiling Quota Left"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_labelsml" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/table_border"
+                            android:gravity="center"
+                            android:text="100"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_labelsml" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/table_border"
+                            android:gravity="center"
+                            android:text="47"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_labelsml" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/table_border"
+                            android:gravity="center"
+                            android:text="953"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_labelsml" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_margin"
+                    android:layout_below="@+id/complete_report_message_txt"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/text_labelmed"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_round"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="View details visa report"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_labelmin" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:padding="@dimen/text_labelsml"
+                        android:src="@drawable/home"
+                        android:tint="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/job_description_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/call_query"
+        android:layout_below="@+id/age_title_lay"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/text_labelmed"
+        android:paddingRight="@dimen/text_labelmed"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/job_description_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_labellow"
+            android:text="Profile Description :-"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/text_labelmed"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/job_description_message_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_labellow"
+            android:text="Not available"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/text_labelmin" />
+
+        <TextView
+            android:id="@+id/job_duties_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_labellow"
+            android:text="Associated Job Duties :-"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/text_labelmed"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/job_duties_message_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_labellow"
+            android:text="Not available"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/text_labelmin" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pre_post_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/text_labelmed"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:layout_toLeftOf="@+id/call_query"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/per_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_labelsml"
+            android:layout_weight="1"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:text="Previous"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_labelmin" />
+
+        <TextView
+            android:id="@+id/nxt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_labelsml"
+            android:layout_weight="1"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_labelmin" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/call_query"
+        android:layout_width="@dimen/text_labelmax"
+        android:layout_height="@dimen/text_labelmax"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/text_labelmed"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:background="@drawable/call_round"
+        android:padding="@dimen/text_labelsml"
+        android:src="@drawable/phone_call"
+        android:tint="@color/white"
+        android:visibility="invisible" />
+
+</RelativeLayout>

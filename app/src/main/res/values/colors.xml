@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d82819</color>
+    <color name="colorPrimary_light">#F6D3D3</color>
+    <color name="colorPrimaryDark">#c03530</color>823F3F
+    <color name="mehroon">#823F3F</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="hint">#676767</color>
+    <color name="hint_new">#50676767</color>
+    <color name="karban">#afafaf</color>
+    <color name="gray">#f1f1f1</color>
+    <color name="trans">#50FFFFFF</color>
+</resources>

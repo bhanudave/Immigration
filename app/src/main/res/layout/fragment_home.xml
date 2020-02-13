@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<ImageView
+        android:id="@+id/call_query"
+        android:layout_width="@dimen/text_labelmax"
+        android:layout_height="@dimen/text_labelmax"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="@dimen/text_labelmed"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:background="@drawable/call_round"
+        android:padding="@dimen/text_labelsml"
+        android:src="@drawable/phone_call"
+        android:tint="@color/white" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/text_labelmax"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_labelmed"
+        android:text="@string/home_page" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/text_labelmed"
+        android:layout_below="@+id/home_title"
+        android:layout_above="@+id/call_query"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/point_cal_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_labelmed"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:tint="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/text_labelsml"
+                android:src="@drawable/home"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/text_labelmin"
+                android:text="@string/immigration_point" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_labelmed"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:tint="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/text_labelsml"
+                android:src="@drawable/home"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/text_labelmin"
+                android:text="@string/profile_skill" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blog_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_labelmed"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:tint="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/text_labelsml"
+                android:src="@drawable/home"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/text_labelmin"
+                android:text="@string/immigration_blog" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expert_query_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_labelmed"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:tint="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/text_labelsml"
+                android:src="@drawable/home"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/text_labelmin"
+                android:text="@string/expert_query" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/call_query"
+        android:layout_width="@dimen/text_labelmax"
+        android:layout_height="@dimen/text_labelmax"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:layout_marginRight="@dimen/text_labelmed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/call_round"
+        android:padding="@dimen/text_labelsml"
+        android:src="@drawable/phone_call"/>
+
+    </RelativeLayout>
+
+    <!--<Button
+        android:id="@+id/fragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="fragment1" />
+
+    <Button
+        android:id="@+id/fragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="fragment2" />-->
+
+</FrameLayout>

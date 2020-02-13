@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/designed_language_page" >
+
+    <!--<include
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_labelmax"
+        layout="@layout/header_activity" />-->
+
+    <TextView
+        android:id="@+id/age_titlesubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message_topic"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="@dimen/text_labelmed"
+        android:textColor="@color/white"
+        android:layout_below="@+id/header_view"
+        android:textSize="@dimen/text_labelmin"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/age_titlesubject"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/designed_language_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/designed_language_rate_title"
+        android:layout_below="@+id/age_titlesubject"
+        android:layout_marginTop="@dimen/text_labellow"
+        android:paddingLeft="@dimen/text_labelmax"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_labelmin"
+        android:text="@string/desgnied_language_page"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/designed_language_rate_title" />
+
+    <TextView
+        android:id="@+id/designed_language_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="@dimen/text_labelmed"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/age_titlesubject"
+        android:layout_marginTop="@dimen/text_labellow"
+        android:paddingLeft="@dimen/text_labelmax"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_labelmin" />
+
+    <TextView
+        android:id="@+id/age_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/designed_language_title"
+        android:layout_margin="@dimen/text_labelsml"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/text_labelmin"
+        android:paddingRight="@dimen/text_labelmin"
+        android:text="@string/message_designed"
+        android:textColor="@color/hint"
+        android:textSize="@dimen/text_labelmin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_below="@+id/age_title_txt"
+        android:gravity="center"
+        android:layout_margin="@dimen/text_labelmed"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/text_labelmed"
+            android:padding="@dimen/text_labelmin"
+            android:background="@drawable/call_round"
+            android:gravity="center"
+            android:src="@drawable/home"
+            android:tint="@color/white" />
+
+    <RadioGroup
+        android:id="@+id/radiodesigned_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <RadioButton
+            android:id="@+id/radiodesigned_languageYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/designed_yes" />
+
+        <RadioButton
+            android:id="@+id/radiodesigned_languageNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/designed_no" />
+
+    </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:layout_marginLeft="@dimen/text_labelmed"
+        android:layout_toLeftOf="@+id/call_query"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/per_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Previous"
+            android:layout_margin="@dimen/text_labelsml"
+            android:background="@drawable/button_round"
+            android:textSize="@dimen/text_labelmin" />
+
+        <TextView
+            android:id="@+id/nxt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/text_labelsml"
+            android:text="Next"
+            android:background="@drawable/button_round"
+            android:textSize="@dimen/text_labelmin" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/call_query"
+        android:layout_width="@dimen/text_labelmax"
+        android:layout_height="@dimen/text_labelmax"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:layout_marginRight="@dimen/text_labelmed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/call_round"
+        android:padding="@dimen/text_labelsml"
+        android:src="@drawable/phone_call"/>
+
+</RelativeLayout>

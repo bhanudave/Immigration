@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/partner_skill_page" >
+
+    <!--<include
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_labelmax"
+        layout="@layout/header_activity" />-->
+
+    <TextView
+        android:id="@+id/age_titlesubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message_topic"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="@dimen/text_labelmed"
+        android:textColor="@color/white"
+        android:layout_below="@+id/header_view"
+        android:textSize="@dimen/text_labelmin"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/age_titlesubject"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/partner_skill_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/partner_skill_rate_title"
+        android:layout_below="@+id/age_titlesubject"
+        android:layout_marginTop="@dimen/text_labellow"
+        android:paddingLeft="@dimen/text_labelmax"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_labelmin"
+        android:text="@string/partner_skill_page"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/partner_skill_rate_title" />
+
+    <TextView
+        android:id="@+id/partner_skill_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="@dimen/text_labelmed"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/age_titlesubject"
+        android:layout_marginTop="@dimen/text_labellow"
+        android:paddingLeft="@dimen/text_labelmax"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_labelmin" />
+
+    <TextView
+        android:id="@+id/age_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/partner_skill_title"
+        android:layout_margin="@dimen/text_labelsml"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/text_labelmin"
+        android:paddingRight="@dimen/text_labelmin"
+        android:text="@string/message_partner_skill"
+        android:textColor="@color/hint"
+        android:textSize="@dimen/text_labelmin" />
+
+    <RadioGroup
+        android:id="@+id/radioPartner_skill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_labelmed"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/age_title_txt">
+
+        <RadioButton
+            android:id="@+id/radioPartner_skillYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/partner_skill_alone" />
+
+        <RadioButton
+            android:id="@+id/radioPartner_skillNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/partner_skill_with" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/with_partner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/radioPartner_skill"
+        android:layout_above="@+id/bottom_view">
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="@dimen/image_margin"
+            android:layout_height="@dimen/image_margin"
+            android:background="@drawable/call_round"
+            android:padding="@dimen/text_labellow"
+            android:layout_marginTop="@dimen/text_labelmed"
+            android:src="@drawable/home"
+            android:tint="@color/white" />
+
+        <CheckBox
+            android:id="@+id/onePartner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/user_img"
+            android:layout_marginTop="@dimen/text_labellow"
+            android:text="@string/one_partner" />
+
+        <CheckBox
+            android:id="@+id/twoPartner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_labellow"
+            android:layout_toRightOf="@+id/user_img"
+            android:layout_below="@+id/onePartner"
+            android:text="@string/two_partner"
+            android:layout_alignParentRight="true" />
+
+        <CheckBox
+            android:id="@+id/threePartner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_labellow"
+            android:layout_toRightOf="@+id/user_img"
+            android:layout_below="@+id/twoPartner"
+            android:text="@string/three_partner"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/text_labelmed"
+        android:layout_marginBottom="@dimen/text_labelmed">-->
+
+        <LinearLayout
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/call_query"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/text_labelmed"
+            android:layout_marginBottom="@dimen/text_labelmed"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+        <TextView
+            android:id="@+id/per_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Previous"
+            android:layout_margin="@dimen/text_labelsml"
+            android:background="@drawable/button_round"
+            android:textSize="@dimen/text_labelmin" />
+
+        <TextView
+            android:id="@+id/nxt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/text_labelsml"
+            android:text="Next"
+            android:background="@drawable/button_round"
+            android:textSize="@dimen/text_labelmin" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/call_query"
+        android:layout_width="@dimen/text_labelmax"
+        android:layout_height="@dimen/text_labelmax"
+        android:tint="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/text_labelmed"
+        android:layout_marginBottom="@dimen/text_labelmed"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/call_round"
+        android:padding="@dimen/text_labelsml"
+        android:src="@drawable/phone_call"/>
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

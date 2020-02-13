@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/immigration_point"
+        android:title="@string/immigration_point"
+        app:showAsAction="never" />
+    <item android:id="@+id/profile_skill"
+        android:title="@string/profile_skill"
+        app:showAsAction="never"/>
+    <item android:id="@+id/immigration_blog"
+        android:title="@string/immigration_blog"
+        app:showAsAction="never"/>
+    <item android:id="@+id/expert_query"
+        android:title="@string/expert_query"
+        app:showAsAction="never"/>
+    <item android:id="@+id/logout"
+        android:title="logout"
+        app:showAsAction="never"/>
+</menu>

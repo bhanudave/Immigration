@@ -1,0 +1,119 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Aspire Square</string>
+    <string name="title_activity_splash" tools:ignore="ExtraTranslation">Splash Activity</string>
+
+    <!--Splash Screen Text-->
+    <string name="company_name">Indylogix Pvt. Ltd.</string>
+
+    <!--Dashboard String-->
+    <string name="immigration_point">Immigration Point Calculator</string>
+    <string name="profile_skill">Profile/Skill Eligibility Assessment Tool</string>
+    <string name="immigration_blog">Immigration Updates/Blog</string>
+    <string name="expert_query">Expert Advice/Query</string>
+
+    <!--Page Topic-->
+    <string name="message_topic">Point assessment for australia immigration</string>
+    <string name="message_age">Which age band do you fit into?</string>
+    <string name="message_qualification">What is your highest Qualification?</string>
+    <string name="message_work_exp">Thinking about your work experience overseas, in the last 10 years, how long have you worked in your nominated occupation or closely related skilled occupation (note that if you have a skilled date in your skill assessment, work experience prior to this would not count for points):</string>
+    <string name="message_english">How would you rate your English language ability?</string>
+    <string name="message_edu_qua">Have you met the requirements for the award of degree, diploma, advanced diploma or trade qualification(s) which took at least 2 years of full-time study in Australia at an Australian institution, which are relevant to your nominated occupation and which were taught in English?</string>
+    <string name="message_aus_work_exp">Thinking about your work experience in Australia, in the last 10 years, how long have you worked in your nominated occupation or closely related skilled occupation (note that if you have a skilled date in your skilled assessment, work experience prior to this would not count for points):</string>
+    <string name="message_partner_skill">Do you want to apply alone or with your partner.</string>
+    <string name="message_designed">Do any of the following apply to you?</string>
+    <string name="message_choose_work_profile">Choose your related work profile category from the given below to know if P.R. options are available.</string>
+
+    <!--Other String-->
+    <string name="home_page">Home</string>
+    <string name="age_page">Age</string>
+    <string name="qulification_page">Qualifications</string>
+    <string name="work_exprience_page">Work Experience Outside Australia</string>
+    <string name="english_page">English Language Ability</string>
+    <string name="austrlian_education_page">Australian Education Qualification</string>
+    <string name="australian_work_exprience_page">Australian Work Exprience</string>
+    <string name="partner_skill_page">Partners Skill Qualifications</string>
+    <string name="desgnied_language_page">Designed Language</string>
+    <string name="choose_work_profile_page">Choose Your Work Profile</string>
+    <string name="blog_page">Blogs</string>
+    <string name="registration_page">Registration</string>
+    <string name="login_page">Login</string>
+    <string name="query_page">Query</string>
+    <string name="profile_page">Profile</string>
+    <string name="result_page">Result</string>
+    <string name="submit_btn">Submit</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="report_view">Skill Eligibilty Tool</string>
+
+    <!--Age page string-->
+    <string name="under_18">Under 18</string>
+    <string name="between_1824">18 to 24</string>
+    <string name="between_2532">25 to 32</string>
+    <string name="between_3339">33 to 39</string>
+    <string name="between_4044">40 to 44</string>
+    <string name="more_45">45 or +</string>
+
+    <!--Qualification page string-->
+    <string name="recog_phd">Recognised PhD(Doctorate)</string>
+    <string name="recog_deg">Recognised Bachelor or Higher</string>
+    <string name="recog_qua">Recognised Trade Qualification Including</string>
+    <string name="recog_no">No Recognised Qualification</string>
+
+    <!--Work Exprience page string-->
+    <string name="work_experience8_year">8 Years or more</string>
+    <string name="work_experience5_year">5 Years or more</string>
+    <string name="work_experience3_year">3 Years or more</string>
+    <string name="work_experienceless3_year">3 Less than Years/No Experience</string>
+
+    <!--English page string-->
+    <string name="english_less">Less than competent English</string>
+    <string name="english_comlete">Competent English</string>
+    <string name="english_proficient">Proficient English</string>
+    <string name="english_super">Superior English</string>
+
+    <!--Australian Work Experience page string-->
+    <string name="australian_work_experience8">8 Years or more</string>
+    <string name="australian_work_experience5">5 Years or more</string>
+    <string name="australian_work_experience3">3 Years or more</string>
+    <string name="australian_work_experience1">1 Years or more</string>
+    <string name="australian_work_experienceless1">1 Less than Years/No Experience</string>
+
+    <!--Australian Education page string-->
+    <string name="australian_yes">Yes</string>
+    <string name="australian_no">No</string>
+
+    <!--Partner Skill page string-->
+    <string name="partner_skill_alone">Alone</string>
+    <string name="partner_skill_with">With Partner</string>
+
+    <!--Designed lanuguage page string-->
+    <string name="designed_yes">I am accredited as para-professinal interpreter or translator (level 2) by the National Accreditation Authority for Translators and Interpreters</string>
+    <string name="designed_no">None of the above</string>
+
+    <!--Choose work profile page string-->
+    <string name="chooose_work_profile">Choose Your Work Profile</string>
+
+    <!--Age Selection message-->
+    <string name="comp_select">Passport: from UK, USA, Ireland, Canada or NZ; or\nIELTS: 6+ in each component; or\nPTE Academic: 50+ in each component; or\nCambridge(CAE): 169+ in each component; or\nTOEFL iBT: 12 in Listerning 13 Reading, 21 Writing, 18</string>
+    <string name="prof_select">IELTS: 7+ in each component; or\nOET: B pass in each component; or\nPTE Academic: 65+ in each component; or\nCambridge(CAE): 185+ in each component; or\nTOEFL iBT: 24 in Listerning, 24 Reading, 27 Writing, 23</string>
+    <string name="super_select">IELTS: 8+ in each component; or\nOET: A pass in each component; or\nPTE Academic: 79+ in each component; or\nCambridge(CAE): 200+ in each component; or\nTOEFL iBT: 28 in Listerning, 29 Reading, 30 Writing, 26 Speaking</string>
+
+
+    <!--Education page metter-->
+    <string name="one_txt">Study in Regional Australia or a Low Population Growth Area</string>
+    <string name="one_more_txt">Have you\n- Met the requirement for the award of degree, diploma, advanced diploma or trade Step2QualificationActivity(s); AND\n- The Step2QualificationActivity(s) were not in English language proficiency; AND\n- The Step2QualificationActivity(s) took at least 2 years of full-time study in Asutralia; AND\n- The Step2QualificationActivity(s) were taught in English; AND\n- The campus of your institution is in a regional or low population growth area;\n- You have spent at least 2 years living in the regional or low population growth area;\n- You did not complete the Step2QualificationActivity(s) via distance education?</string>
+    <string name="two_txt">Professional Year</string>
+    <string name="two_more_txt">Have you\n- Have you complete a Professional Year in Australia in your occupation following your studies - currently available for accountant, engineers and IT professionals:</string>
+    <string name="three_txt">STEM/ICT Qualification</string>
+    <string name="three_more_txt">Do you have STEM/IC(Master/phd degree from australia.)</string>
+
+    <!--Partner matter-->
+    <string name="one_partner">My partner is aged under 45</string>
+    <string name="two_partner">My partner has competent English ability</string>
+    <string name="three_partner">My partner can pass skill assessment in an Occupation List for my subclass.</string>
+
+    <!--Facebook String-->
+
+    <string name="facebook_app_id">648351865973706</string>
+    <string name="fb_login_protocol_scheme">fb648351865973706</string>
+
+</resources>
