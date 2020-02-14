@@ -23,9 +23,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.immigration.Animation.MyBounceInterpolator;
+import com.immigration.Fragment.AgeFragment;
 import com.immigration.Fragment.ChooseWorkFragment;
 import com.immigration.Fragment.HomeFragment;
 import com.immigration.Fragment.QueryFragment;
@@ -105,10 +107,19 @@ public class HomeActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.immigration_point:
-                                loadFragment(new HomeFragment());
+                                loadFragment(new AgeFragment());
                                 return true;
                             case R.id.profile_skill:
-                                loadFragment(new ChooseWorkFragment());
+//                                loadFragment(new ChooseWorkFragment());
+                                Bundle bundle=new Bundle();
+                                bundle.putString("TITLE", "CHOOSE");
+                                Fragment fragment = new ChooseWorkFragment();
+                                FragmentManager fragmentManager = getSupportFragmentManager();
+                                fragment.setArguments(bundle);
+                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, fragment);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
                                 return true;
                             case R.id.immigration_blog:
                                 loadFragment(new HomeFragment());

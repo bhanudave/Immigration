@@ -1,6 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<paths>
+<?xml version="1.0" encoding="utf-8"?><!--<paths>
     <external-path
         name="external_files"
         path="." />
+</paths>-->
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+     name is the file name
+     path is the root of external storage, it means here: Environment.getExternalStorageDirectory()
+     -->
+    <external-path
+        name="scale"
+        path="." />
+
+    <!--
+    another example:  Environment.getExternalStorageDirectory() + File.separator + "temps" + "myFile.pdf"
+     -->
+    <external-path
+        name="myFile"
+        path="temps" />
+
 </paths>
