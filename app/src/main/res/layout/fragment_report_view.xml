@@ -35,29 +35,41 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
         <TextView
             android:id="@+id/profile_detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="1dp"
-            android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:gravity="center"
             android:text="PROFILE DETAILS"
             android:textColor="@color/white"
             android:textSize="@dimen/text_labelmin" />
 
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
         <TextView
             android:id="@+id/job_description"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="1dp"
-            android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:gravity="center"
             android:text="JOB DESCRIPTION"
             android:textColor="@color/white"
             android:textSize="@dimen/text_labelmin" />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
@@ -118,11 +130,15 @@
                     android:orientation="horizontal"
                     android:weightSum="3">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/text_labellow"
-                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:weightSum="3">
 
@@ -131,6 +147,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:padding="@dimen/text_labelsml"
                             android:background="@drawable/border_round"
                             android:src="@drawable/user" />
 
@@ -139,17 +156,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
+                            android:gravity="center"
                             android:text="Skilled Independent Subclass 189"
                             android:textColor="@color/hint"
                             android:textSize="@dimen/text_labelsml" />
 
                     </LinearLayout>
 
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/text_labellow"
-                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:weightSum="3">
 
@@ -158,6 +182,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:padding="@dimen/text_labelsml"
                             android:background="@drawable/border_round"
                             android:src="@drawable/user" />
 
@@ -166,17 +191,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
+                            android:gravity="center"
                             android:text="Skilled Nominated Subclass 190"
                             android:textColor="@color/hint"
                             android:textSize="@dimen/text_labelsml" />
 
                     </LinearLayout>
 
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/text_labellow"
-                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:weightSum="3">
 
@@ -185,6 +217,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:padding="@dimen/text_labelsml"
                             android:background="@drawable/border_round"
                             android:src="@drawable/user" />
 
@@ -193,11 +226,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
+                            android:gravity="center"
                             android:text="Skilled Regional (Provisional) Subclass 489"
                             android:textColor="@color/hint"
                             android:textSize="@dimen/text_labelsml" />
 
                     </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -303,14 +339,19 @@
 
                 </TableLayout>
 
-                <LinearLayout
-                    android:id="@+id/detail_lay"
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_margin"
                     android:layout_below="@+id/complete_report_message_txt"
-                    android:layout_gravity="center"
                     android:layout_margin="@dimen/text_labelmed"
-                    android:layout_weight="1"
+                    android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/detail_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:background="@drawable/button_round"
                     android:gravity="center"
                     android:orientation="horizontal"
@@ -326,18 +367,24 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/text_labelmin" />
 
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="2"
-                        android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:padding="@dimen/text_labelsml"
-                        android:src="@drawable/home"
-                        android:tint="@color/white" />
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimary" />
 
                 </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 

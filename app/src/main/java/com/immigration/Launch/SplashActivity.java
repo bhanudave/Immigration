@@ -1,7 +1,6 @@
 package com.immigration.Launch;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +17,7 @@ import android.view.View;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -31,7 +31,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 
-public class SplashActivity extends Activity {
+public class SplashActivity extends AppCompatActivity {
 
     Handler handler;
     private static final int PERMISSION_REQUEST_CODE = 200;
@@ -42,6 +42,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        getSupportActionBar().hide();
 
         sharedpreferences = getSharedPreferences(utills.MyPREFERENCES, Context.MODE_PRIVATE);
         /*FacebookSdk.sdkInitialize(getApplicationContext());
