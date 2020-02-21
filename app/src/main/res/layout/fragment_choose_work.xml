@@ -99,6 +99,7 @@
         android:id="@+id/choose_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_labelmin"
         android:layout_below="@+id/age_title_lay"
         android:background="@drawable/layout_round">
 
