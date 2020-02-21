@@ -51,19 +51,19 @@ public class QueryFragment extends Fragment {
       submit_btn.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-            if (edtUsername.getText().equals("") && edtUsername.getText().equals(null) && edtUsername.getText().length() == 0) {
+            if (edtUsername.getText().length() == 0) {
                Snackbar.make(query_page, "Please enter user full name.", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtMobile.getText().equals("") && edtMobile.getText().equals(null) && edtMobile.getText().length() == 0) {
+            } else if (edtMobile.getText().length() == 0) {
                Snackbar.make(query_page, "Please enter mobile no..", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtEmail.getText().equals("") && edtEmail.getText().equals(null) && edtEmail.getText().length() == 0) {
+            } else if (edtEmail.getText().length() == 0) {
                Snackbar.make(query_page, "Please enter email id.", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtProfile.getText().equals("") && edtProfile.getText().equals(null) && edtProfile.getText().length() == 0) {
+            } else if (edtProfile.getText().length() == 0) {
                Snackbar.make(query_page, "Please enter profile.", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtUserquery.getText().equals("") && edtUserquery.getText().equals(null) && edtUserquery.getText().length() == 0) {
+            } else if (edtUserquery.getText().length() == 0) {
                Snackbar.make(query_page, "Please fill the query.", Snackbar.LENGTH_LONG).show();
             } else {
                 Snackbar.make(query_page, "Successfully Submit.", Snackbar.LENGTH_LONG).show();

@@ -72,25 +72,25 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
 
         if (v.getId() == R.id.submit_btn) {
 
-            if (edtUsername.getText().equals("") && edtUsername.getText().equals(null) && edtUsername.getText().length() == 0) {
+            if (edtUsername.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please enter user full name.", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtMobile.getText().equals("") && edtMobile.getText().equals(null) && edtMobile.getText().length() == 0) {
+            } else if (edtMobile.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please enter mobile no..", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtEmail.getText().equals("") && edtEmail.getText().equals(null) && edtEmail.getText().length() == 0) {
+            } else if (edtEmail.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please enter email id.", Snackbar.LENGTH_LONG).show();
 
             } else if (!EMAIL_ADDRESS_PATTERN.matcher(edtEmail.getText().toString()).matches()) {
                 Snackbar.make(registration_page, "Please enter email id.", Snackbar.LENGTH_LONG).show();
 
-            } else if (edtUserquery.getText().equals("") && edtUserquery.getText().equals(null) && edtUserquery.getText().length() == 0) {
+            } else if (edtUserquery.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please fill the query.", Snackbar.LENGTH_LONG).show();
-            } else if (edtCountry.getText().equals("") && edtCountry.getText().equals(null) && edtCountry.getText().length() == 0) {
+            } else if (edtCountry.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please enter country.", Snackbar.LENGTH_LONG).show();
-            } else if (edtCity.getText().equals("") && edtCity.getText().equals(null) && edtCity.getText().length() == 0) {
+            } else if (edtCity.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please enter city.", Snackbar.LENGTH_LONG).show();
-            } else if (edtPassword.getText().equals("") && edtPassword.getText().equals(null) && edtPassword.getText().length() == 0) {
+            } else if (edtPassword.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please enter password.", Snackbar.LENGTH_LONG).show();
             } else if (edtPassword.getText().toString().length() < 8) {
                 Snackbar.make(registration_page, "User enter 8 or more than character for password.", Snackbar.LENGTH_LONG).show();
