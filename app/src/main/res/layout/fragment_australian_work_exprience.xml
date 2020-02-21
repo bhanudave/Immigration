@@ -78,24 +78,29 @@
         android:textSize="@dimen/text_labelmin" />
 
     <LinearLayout
+        android:id="@+id/mid_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/call_query"
+        android:layout_height="@dimen/hight_view"
         android:layout_below="@+id/age_title_txt"
         android:layout_marginLeft="@dimen/text_labelsml"
         android:layout_marginRight="@dimen/text_labelsml"
         android:layout_marginBottom="@dimen/text_labelsml"
         android:orientation="vertical"
-        android:weightSum="3">
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/australian_work_experience8_lay"
@@ -103,7 +108,6 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
                 android:background="@drawable/button_round"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -114,10 +118,15 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:src="@drawable/user"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/text_labelmin"
+                    android:background="@color/colorPrimaryDark" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -130,13 +139,19 @@
 
             </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
             <LinearLayout
                 android:id="@+id/australian_work_experience5_lay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
                 android:background="@drawable/button_round"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -147,10 +162,15 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:src="@drawable/user"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/text_labelmin"
+                    android:background="@color/colorPrimaryDark" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -163,49 +183,67 @@
 
             </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/australian_work_experience3_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/text_labelmed"
+                    android:background="@drawable/button_round"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/text_labelmin"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/australian_work_experience3"
+                        android:textSize="@dimen/text_labelsml" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
 
-            <LinearLayout
-                android:id="@+id/australian_work_experience3_lay"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
-                android:background="@drawable/button_round"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="3">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
-                    android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/australian_work_experience3"
-                    android:textSize="@dimen/text_labelsml" />
-
-            </LinearLayout>
+                android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/australian_work_experience1_lay"
@@ -224,10 +262,15 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:src="@drawable/user"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/text_labelmin"
+                    android:background="@color/colorPrimaryDark" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -240,86 +283,107 @@
 
             </LinearLayout>
 
-        </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:id="@+id/australian_work_experienceless1_lay"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
-                android:background="@drawable/button_round"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="3">
+                android:layout_weight="1">
 
-                <ImageView
+                <LinearLayout
+                    android:id="@+id/australian_work_experienceless1_lay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_margin="@dimen/text_labelmed"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/button_round"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:orientation="vertical"
+                    android:weightSum="3">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/australian_work_experienceless1"
-                    android:textSize="@dimen/text_labelsml" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimaryDark" />
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/text_labelmin"
+                        android:background="@color/colorPrimaryDark" />
 
-            <LinearLayout
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/australian_work_experienceless1"
+                        android:textSize="@dimen/text_labelsml" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
-                android:background="@drawable/button_round"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:visibility="invisible"
-                android:weightSum="3">
+                android:layout_weight="1">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_margin="@dimen/text_labelmed"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/button_round"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:weightSum="3">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/australian_work_experienceless1"
-                    android:textSize="@dimen/text_labelsml" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimaryDark" />
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/text_labelmin"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/australian_work_experienceless1"
+                        android:textSize="@dimen/text_labelsml" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mid_layout"
+        android:layout_above="@+id/call_query" />
 
     <LinearLayout
         android:layout_width="match_parent"

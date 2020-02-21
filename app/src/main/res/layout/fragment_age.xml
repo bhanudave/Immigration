@@ -77,24 +77,29 @@
         android:textSize="@dimen/text_labelmin" />
 
     <LinearLayout
+        android:id="@+id/mid_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/call_query"
+        android:layout_height="@dimen/hight_view"
         android:layout_below="@+id/age_title_txt"
         android:layout_marginLeft="@dimen/text_labelsml"
         android:layout_marginRight="@dimen/text_labelsml"
         android:layout_marginBottom="@dimen/text_labelsml"
         android:orientation="vertical"
-        android:weightSum="3">
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/under18_lay"
@@ -102,32 +107,43 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
                 android:background="@drawable/button_round"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:weightSum="3">
+                android:weightSum="2">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:src="@drawable/user"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/text_labelsml"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/under_18"
                     android:textSize="@dimen/text_labelsml" />
 
             </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/between1824_lay"
@@ -135,76 +151,98 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
                 android:background="@drawable/button_round"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:weightSum="3">
+                android:weightSum="2">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:src="@drawable/user"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/text_labelsml"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/between_1824"
                     android:textSize="@dimen/text_labelsml" />
 
             </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/between2532_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/text_labelmed"
+                    android:background="@drawable/button_round"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/text_labelsml"
+                        android:background="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/between_2532"
+                        android:textSize="@dimen/text_labelsml" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
 
-            <LinearLayout
-                android:id="@+id/between2532_lay"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
-                android:background="@drawable/button_round"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="3">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
-                    android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/between_2532"
-                    android:textSize="@dimen/text_labelsml" />
-
-            </LinearLayout>
+                android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/between3339_lay"
@@ -212,113 +250,136 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
                 android:background="@drawable/button_round"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:weightSum="3">
+                android:weightSum="2">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:src="@drawable/user"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/text_labelsml"
+                    android:background="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/between_3339"
                     android:textSize="@dimen/text_labelsml" />
 
             </LinearLayout>
 
-        </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:id="@+id/between4044_lay"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
-                android:background="@drawable/button_round"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="3">
+                android:layout_weight="1">
 
-                <ImageView
+                <LinearLayout
+                    android:id="@+id/between4044_lay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_margin="@dimen/text_labelmed"
+                    android:background="@drawable/button_round"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/between_4044"
-                    android:textSize="@dimen/text_labelsml" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimaryDark" />
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/text_labelsml"
+                        android:background="@color/colorPrimaryDark"/>
 
-            <LinearLayout
-                android:id="@+id/more_45_lay"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/between_4044"
+                        android:textSize="@dimen/text_labelsml" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/text_labelmed"
-                android:layout_weight="1"
-                android:background="@drawable/button_round"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="3">
+                android:layout_weight="1">
 
-                <ImageView
+                <LinearLayout
+                    android:id="@+id/more_45_lay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_margin="@dimen/text_labelmed"
+                    android:background="@drawable/button_round"
                     android:gravity="center"
-                    android:src="@drawable/home"
-                    android:tint="@color/white" />
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/more_45"
-                    android:textSize="@dimen/text_labelsml" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/user"
+                        android:tint="@color/colorPrimaryDark" />
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/text_labelsml"
+                        android:background="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/more_45"
+                        android:textSize="@dimen/text_labelsml" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mid_layout"
+        android:layout_above="@+id/call_query" />
 
     <LinearLayout
         android:layout_width="match_parent"

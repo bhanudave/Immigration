@@ -87,19 +87,31 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
         <RadioButton
             android:id="@+id/radioYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/australian_yes" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
         <RadioButton
             android:id="@+id/radioNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/australian_no" />
+
+        </androidx.cardview.widget.CardView>
 
     </RadioGroup>
 
@@ -163,19 +175,31 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                     <RadioButton
                         android:id="@+id/radioOneYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text="@string/australian_yes" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                     <RadioButton
                         android:id="@+id/radioOneNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text="@string/australian_no" />
+
+                    </androidx.cardview.widget.CardView>
 
                 </RadioGroup>
 
@@ -225,19 +249,31 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                     <RadioButton
                         android:id="@+id/radioTwoYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text="@string/australian_yes" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                     <RadioButton
                         android:id="@+id/radioTwoNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text="@string/australian_no" />
+
+                    </androidx.cardview.widget.CardView>
 
                 </RadioGroup>
 
@@ -286,19 +322,31 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                     <RadioButton
                         android:id="@+id/radioThreeYes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text="@string/australian_yes" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                     <RadioButton
                         android:id="@+id/radioThreeNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text="@string/australian_no" />
+
+                    </androidx.cardview.widget.CardView>
 
                 </RadioGroup>
 

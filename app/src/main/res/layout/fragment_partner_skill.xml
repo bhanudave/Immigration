@@ -86,19 +86,31 @@
         android:weightSum="2"
         android:layout_below="@+id/age_title_txt">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
         <RadioButton
             android:id="@+id/radioPartner_skillYes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/partner_skill_alone" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
         <RadioButton
             android:id="@+id/radioPartner_skillNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/partner_skill_with" />
+
+        </androidx.cardview.widget.CardView>
 
     </RadioGroup>
 
@@ -107,8 +119,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:layout_below="@+id/radioPartner_skill"
-        android:layout_above="@+id/bottom_view">
+        android:layout_margin="@dimen/text_labelmed"
+        android:layout_below="@+id/radioPartner_skill" >
 
         <ImageView
             android:id="@+id/user_img"
@@ -159,6 +171,12 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/text_labelmed"
         android:layout_marginBottom="@dimen/text_labelmed">-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/with_partner_layout"
+        android:layout_above="@+id/bottom_view" />
 
         <LinearLayout
             android:id="@+id/bottom_view"

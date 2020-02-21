@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -122,18 +123,23 @@ public class AgeFragment extends Fragment {
       });
 
       nxt_txt.setOnClickListener(new View.OnClickListener() {
+         @SuppressLint("WrongConstant")
          @Override
          public void onClick(View v) {
-            nxt_txt.setBackgroundResource(R.drawable.selected_round);
-            Bundle bundle=new Bundle();
-            bundle.putString("SCORE", age_rate_title.getText().toString());
-            Fragment fragment = new QualificationFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            fragment.setArguments(bundle);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            if (age_rate_title.getText().toString().equalsIgnoreCase("")) {
+               Toast.makeText(getContext(),"Please Select Age!",0).show();
+            } else {
+               nxt_txt.setBackgroundResource(R.drawable.selected_round);
+               Bundle bundle = new Bundle();
+               bundle.putString("SCORE", age_rate_title.getText().toString());
+               Fragment fragment = new QualificationFragment();
+               FragmentManager fragmentManager = getFragmentManager();
+               fragment.setArguments(bundle);
+               FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+               fragmentTransaction.replace(R.id.container, fragment);
+               fragmentTransaction.addToBackStack(null);
+               fragmentTransaction.commit();
+            }
          }
       });
 

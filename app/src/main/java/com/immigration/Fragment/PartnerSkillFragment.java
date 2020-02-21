@@ -1,15 +1,18 @@
 package com.immigration.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,111 +24,185 @@ import com.immigration.R;
 
 public class PartnerSkillFragment extends Fragment {
 
-   private RelativeLayout partner_skill_page;
-   private TextView partner_skill_rate_title;
-   private TextView per_txt;
-   private TextView nxt_txt;
-   private CheckBox One_partner,Two_partner,Three_partner;
-   private RelativeLayout with_partner_layout;
+    private RelativeLayout partner_skill_page;
+    private TextView partner_skill_rate_title;
+    private TextView per_txt;
+    private TextView nxt_txt;
+    private CheckBox One_partner, Two_partner, Three_partner;
+    private RelativeLayout with_partner_layout;
 
-   private RadioGroup radioPartner_skill;
-   private RadioButton radioPartner_skillYes,radioPartner_skillNo;
+    private RadioGroup radioPartner_skill;
+    private RadioButton radioPartner_skillYes, radioPartner_skillNo;
 
-   @Nullable
-   @Override
-   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-      View view = inflater.inflate(R.layout.fragment_partner_skill, container, false);
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_partner_skill, container, false);
 
-      partner_skill_page = view.findViewById(R.id.partner_skill_page);
+        partner_skill_page = view.findViewById(R.id.partner_skill_page);
 
-      partner_skill_rate_title = view.findViewById(R.id.partner_skill_rate_title);
+        partner_skill_rate_title = view.findViewById(R.id.partner_skill_rate_title);
 
-      per_txt = view.findViewById(R.id.per_txt);
-      nxt_txt = view.findViewById(R.id.nxt_txt);
+        per_txt = view.findViewById(R.id.per_txt);
+        nxt_txt = view.findViewById(R.id.nxt_txt);
 
-      radioPartner_skill = view.findViewById(R.id.radioPartner_skill);
-      radioPartner_skillYes = view.findViewById(R.id.radioPartner_skillYes);
-      radioPartner_skillNo = view.findViewById(R.id.radioPartner_skillNo);
+        radioPartner_skill = view.findViewById(R.id.radioPartner_skill);
+        radioPartner_skillYes = view.findViewById(R.id.radioPartner_skillYes);
+        radioPartner_skillNo = view.findViewById(R.id.radioPartner_skillNo);
 
-      One_partner = view.findViewById(R.id.onePartner);
-      Two_partner = view.findViewById(R.id.twoPartner);
-      Three_partner = view.findViewById(R.id.threePartner);
+        One_partner = view.findViewById(R.id.onePartner);
+        Two_partner = view.findViewById(R.id.twoPartner);
+        Three_partner = view.findViewById(R.id.threePartner);
 
-      with_partner_layout = view.findViewById(R.id.with_partner_layout);
+        with_partner_layout = view.findViewById(R.id.with_partner_layout);
 
-      partner_skill_rate_title.setText("");
+        partner_skill_rate_title.setText("");
 
-      with_partner_layout.setVisibility(View.INVISIBLE);
+        with_partner_layout.setVisibility(View.INVISIBLE);
 
-      radioPartner_skillYes.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-            int selectedId = radioPartner_skill.getCheckedRadioButtonId();
-            Log.e("Bhanu-Yes", String.valueOf(selectedId));
-            partner_skill_rate_title.setText("Score : "+ 65);
-            with_partner_layout.setVisibility(View.INVISIBLE);
-         }
-      });
+        radioPartner_skillYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int selectedId = radioPartner_skill.getCheckedRadioButtonId();
+                Log.e("Bhanu-Yes", String.valueOf(selectedId));
+                partner_skill_rate_title.setText("Score : " + 65);
+                with_partner_layout.setVisibility(View.INVISIBLE);
+                if (selectedId == radioPartner_skillYes.getId()) {
+                    radioPartner_skillYes.setChecked(true);
+                } else {
+                    radioPartner_skillNo.setChecked(false);
+                }
+            }
+        });
 
-      radioPartner_skillNo.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-            int selectedId = radioPartner_skill.getCheckedRadioButtonId();
-            Log.e("Bhanu-No", String.valueOf(selectedId));
-            partner_skill_rate_title.setText("Score : "+ 60);
-            with_partner_layout.setVisibility(View.VISIBLE);
-         }
-      });
+        radioPartner_skillNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int selectedId = radioPartner_skill.getCheckedRadioButtonId();
+                Log.e("Bhanu-No", String.valueOf(selectedId));
+                partner_skill_rate_title.setText("Score : " + 60);
+                with_partner_layout.setVisibility(View.VISIBLE);
+                if (selectedId == radioPartner_skillNo.getId()) {
+                    radioPartner_skillNo.setChecked(true);
+                } else {
+                    radioPartner_skillYes.setChecked(false);
+                }
+            }
+        });
 
-      per_txt.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-            per_txt.setBackgroundResource(R.drawable.selected_round);
-            nxt_txt.setBackgroundResource(R.drawable.button_round);
-            Bundle bundle=new Bundle();
-            bundle.putString("SCORE", partner_skill_rate_title.getText().toString());
-            Fragment fragment = new AustralianWorkExperienceFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            fragment.setArguments(bundle);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-         }
-      });
+        per_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                per_txt.setBackgroundResource(R.drawable.selected_round);
+                nxt_txt.setBackgroundResource(R.drawable.button_round);
+                Bundle bundle = new Bundle();
+                bundle.putString("SCORE", partner_skill_rate_title.getText().toString());
+                Fragment fragment = new AustralianWorkExperienceFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                fragment.setArguments(bundle);
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
-      nxt_txt.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-            int totalamount=0;
-            StringBuilder result=new StringBuilder();
-            result.append("Selected Items:");
-            if(One_partner.isChecked()){
-               result.append("1");
+        One_partner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (One_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 60);
+                } else if (One_partner.isChecked() && Two_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 65);
+                } else if (One_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (Two_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (One_partner.isChecked() && Two_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else {
+                    partner_skill_rate_title.setText("Score : " + 60);
+                }
+            }
+        });
+
+        Two_partner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (Two_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 65);
+                } else if (One_partner.isChecked() && Two_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 65);
+                } else if (One_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (Two_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (One_partner.isChecked() && Two_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else {
+                    partner_skill_rate_title.setText("Score : " + 65);
+                }
+            }
+        });
+
+        Three_partner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (One_partner.isChecked() && Two_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 65);
+                } else if (One_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (Two_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else if (One_partner.isChecked() && Two_partner.isChecked() && Three_partner.isChecked()) {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                } else {
+                    partner_skill_rate_title.setText("Score : " + 70);
+                }
+            }
+        });
+
+        nxt_txt.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("WrongConstant")
+            @Override
+            public void onClick(View v) {
+                int totalamount = 0;
+                StringBuilder result = new StringBuilder();
+                result.append("Selected Items:");
+
+                if (One_partner.isChecked()) {
+                    result.append("1");
 //                totalamount+=100;
-            }
-            if(Two_partner.isChecked()){
-               result.append("2");
-            }
-            if(Three_partner.isChecked()){
-               result.append("3");
-            }
+                }
+                if (Two_partner.isChecked()) {
+                    result.append("2");
+                }
+                if (Three_partner.isChecked()) {
+                    result.append("3");
+                }
 //            result.append("\nTotal: "+totalamount+"Rs");
-            //Displaying the message on the toast
+                //Displaying the message on the toast
 //            Toast.makeText(getContext(), result.toString(), Toast.LENGTH_LONG).show();
 
-            per_txt.setBackgroundResource(R.drawable.button_round);
-            nxt_txt.setBackgroundResource(R.drawable.selected_round);
-            Fragment fragment = new DesignedLanguageFragment();
-            FragmentManager fragmentManager = getFragmentManager();
+                per_txt.setBackgroundResource(R.drawable.button_round);
+                nxt_txt.setBackgroundResource(R.drawable.selected_round);
+                if (partner_skill_rate_title.getText().toString().equalsIgnoreCase("")) {
+                    Toast.makeText(getContext(),"Please Select Partner Skill!",0).show();
+                } else {
+                    Fragment fragment = new DesignedLanguageFragment();
+                    FragmentManager fragmentManager = getFragmentManager();
 //            fragment.setArguments(bundle);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-         }
-      });
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.container, fragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+            }
+        });
 
-      return view;
-   }
+        return view;
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.immigration.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,7 +54,12 @@ public class DesignedLanguageFragment extends Fragment {
          public void onClick(View v) {
             int selectedId = radiodesigned_language.getCheckedRadioButtonId();
             Log.e("Bhanu-Yes", String.valueOf(selectedId));
-            designed_language_rate_title.setText("Score : "+ 70);
+            designed_language_rate_title.setText("Score : " + 70);
+            if(selectedId == radiodesigned_languageYes.getId()) {
+               radiodesigned_languageYes.setChecked(true);
+            } else {
+               radiodesigned_languageNo.setChecked(false);
+            }
          }
       });
 
@@ -61,7 +68,12 @@ public class DesignedLanguageFragment extends Fragment {
          public void onClick(View v) {
             int selectedId = radiodesigned_language.getCheckedRadioButtonId();
             Log.e("Bhanu-No", String.valueOf(selectedId));
-            designed_language_rate_title.setText("Score : "+ 65);
+            designed_language_rate_title.setText("Score : " + 65);
+            if(selectedId == radiodesigned_languageNo.getId()) {
+               radiodesigned_languageNo.setChecked(true);
+            } else {
+               radiodesigned_languageYes.setChecked(false);
+            }
          }
       });
 
@@ -83,19 +95,24 @@ public class DesignedLanguageFragment extends Fragment {
       });
 
       nxt_txt.setOnClickListener(new View.OnClickListener() {
+         @SuppressLint("WrongConstant")
          @Override
          public void onClick(View v) {
-            per_txt.setBackgroundResource(R.drawable.button_round);
-            nxt_txt.setBackgroundResource(R.drawable.selected_round);
-            Bundle bundle=new Bundle();
-            bundle.putString("TITLE", designed_language_rate_title.getText().toString());
-            Fragment fragment = new ChooseWorkFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            fragment.setArguments(bundle);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            if (designed_language_rate_title.getText().toString().equalsIgnoreCase("")) {
+               Toast.makeText(getContext(),"Please Select Designed Language!",0).show();
+            } else {
+               per_txt.setBackgroundResource(R.drawable.button_round);
+               nxt_txt.setBackgroundResource(R.drawable.selected_round);
+               Bundle bundle = new Bundle();
+               bundle.putString("TITLE", designed_language_rate_title.getText().toString());
+               Fragment fragment = new ChooseWorkFragment();
+               FragmentManager fragmentManager = getFragmentManager();
+               fragment.setArguments(bundle);
+               FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+               fragmentTransaction.replace(R.id.container, fragment);
+               fragmentTransaction.addToBackStack(null);
+               fragmentTransaction.commit();
+            }
          }
       });
 

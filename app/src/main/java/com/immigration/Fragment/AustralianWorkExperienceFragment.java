@@ -1,5 +1,6 @@
 package com.immigration.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -123,15 +125,20 @@ public class AustralianWorkExperienceFragment extends Fragment {
       });
 
       nxt_txt.setOnClickListener(new View.OnClickListener() {
+         @SuppressLint("WrongConstant")
          @Override
          public void onClick(View v) {
-            Fragment fragment = new PartnerSkillFragment();
-            FragmentManager fragmentManager = getFragmentManager();
+            if (australian_work_experience_rate_title.getText().toString().equalsIgnoreCase("")) {
+               Toast.makeText(getContext(),"Please Select Work Experience In Australia!",0).show();
+            } else {
+               Fragment fragment = new PartnerSkillFragment();
+               FragmentManager fragmentManager = getFragmentManager();
 //            fragment.setArguments(bundle);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+               FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+               fragmentTransaction.replace(R.id.container, fragment);
+               fragmentTransaction.addToBackStack(null);
+               fragmentTransaction.commit();
+            }
          }
       });
 
