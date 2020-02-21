@@ -20,7 +20,8 @@ import com.immigration.R;
 import com.immigration.Utills.utills;
 
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.regex.Pattern;
+
+import static com.immigration.Utills.utills.EMAIL_ADDRESS_PATTERN;
 
 public class RegistrationActivity extends Activity implements View.OnClickListener {
 
@@ -82,7 +83,7 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
                 Snackbar.make(registration_page, "Please enter email id.", Snackbar.LENGTH_LONG).show();
 
             } else if (!EMAIL_ADDRESS_PATTERN.matcher(edtEmail.getText().toString()).matches()) {
-                Snackbar.make(registration_page, "Please enter email id.", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(registration_page, "Please enter valid email id.", Snackbar.LENGTH_LONG).show();
 
             } else if (edtUserquery.getText().length() == 0) {
                 Snackbar.make(registration_page, "Please fill the query.", Snackbar.LENGTH_LONG).show();
@@ -126,16 +127,6 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
             startActivity(i);
         }
     }
-
-    public final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
-            "[a-zA-Z0-9+._%-+]{1,256}" +
-                    "@" +
-                    "[a-zA-Z0-9][a-zA-Z0-9-]{0,64}" +
-                    "(" +
-                    "." +
-                    "[a-zA-Z0-9][a-zA-Z0-9-]{0,25}" +
-                    ")+"
-    );
 
     @Override
     public void onBackPressed() {
