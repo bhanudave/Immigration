@@ -41,13 +41,13 @@
                 android:layout_height="wrap_content"
                 android:text="Full Name"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User full name: "
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/hint" />
 
             <EditText
                 android:id="@+id/edtUsername"
@@ -69,13 +69,13 @@
                 android:layout_marginTop="@dimen/text_labelmin"
                 android:text="Mobile Number"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User mobile no.: "
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/hint" />
 
             <EditText
                 android:id="@+id/edtMobile"
@@ -98,13 +98,13 @@
                 android:layout_marginTop="@dimen/text_labelmin"
                 android:text="Email"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User email: "
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/hint" />
 
             <EditText
                 android:id="@+id/edtEmail"
@@ -126,13 +126,13 @@
                 android:layout_marginTop="@dimen/text_labelmin"
                 android:text="Job Profile"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Userprofile: "
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/hint" />
 
             <EditText
                 android:id="@+id/edtProfile"
@@ -154,13 +154,13 @@
                 android:layout_marginTop="@dimen/text_labelmin"
                 android:text="Query"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Userquery: "
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/hint" />
 
             <EditText
                 android:id="@+id/edtUserquery"
